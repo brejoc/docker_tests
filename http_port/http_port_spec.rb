@@ -1,26 +1,13 @@
 require 'docker'
 require 'net/http'
 
-describe "the mmcken/nginx image" do
-    before(:all) {
-        @image = Docker::Image.all().detect{|i| i.info['RepoTags'][0] == 'mmckeen/nginx:latest'}
-    }
-
-    it "should be availble" do
-        expect(@image).to_not be_nil
-    end
-
-    it "should expose the default tcp port" do
-        expect(@image.json["ContainerConfig"]["ExposedPorts"]).to include("80/tcp")
-    end
-end
 
 describe "the mmcken/nginx image" do
     before(:all) {
         @image = Docker::Image.all().detect{|i| i.info['RepoTags'][0] == 'mmckeen/nginx:latest'}
     }
 
-    it "should be availble" do
+    it "should be available" do
         expect(@image).to_not be_nil
     end
 
