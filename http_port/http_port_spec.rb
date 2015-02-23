@@ -1,3 +1,6 @@
+# Author: Jochen Breuer <brejoc@gmail.com>
+# License: Public Domain - For more information, please refer to <http://unlicense.org>
+
 require 'docker'
 require 'net/http'
 
